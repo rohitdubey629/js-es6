@@ -1,3 +1,3 @@
 const sum = (a, b) => a + b;
 
-console.log(sum(1,2));
+console.log("sum is"+sum(10,12));
