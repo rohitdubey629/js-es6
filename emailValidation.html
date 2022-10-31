@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email validation</title>
+</head>
+<style>
+    #error2 {
+        border: none;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="emailbox">
+            <label for="">Email</label>
+            <input type="text" id="email" />
+            <span id="erroe"> </span>
+            <input type="text" id="error2" value="">
+        </div>
+        <div class="btn">
+            <input type="button" value="valid" onclick="check();" />
+        </div>
+    </div>
+</body>
+<script>
+
+    function check() {
+        let emailInput = document.getElementById("email").value;
+
+        // var errorOutput = document.getElementById("error");
+        // var error1 = "rohit";
+
+        // errorOutput.innerHTML = error1;
+        // document.getElementById("error").innerHTML = 'Hello';
+
+        let alt = document.getElementById("error2");
+
+        let count = 0;
+        let last = 0;
+
+        let arr = emailInput.split("");
+        let last1 = arr[arr.length - 1];
+
+        for (let i = 0; i < arr.length; i++) {
+            if (emailInput[i] == '@') {
+                count++;
+                console.log("hii");
+            }
+        }
+        // if(last!==0){}
+        if (last >= 0) {
+            if (emailInput[0] != '@') {
+                if (count === 1) {
+                    if (last1 != '@') {
+                        document.getElementById("error2").value = "valid ";
+                    } else {
+                        document.getElementById("error2").value = "invalid @ is last index ";
+                    }
+                } else {
+                    document.getElementById("error2").value = "invalid @ is greater the one ";
+                }
+            } else {
+                document.getElementById("error2").value = "invalid @ is first index ";
+            }
+        } else {
+            document.getElementById("error2").value = "invalid @ is missing";
+
+        }
+
+    }
+
+
+
+
+
+</script>
+
+</html>
+
+
+
+
+
+
+<!-- 
+var x = 'abc';
+var arr = x.split("");
+
+var last = arr[arr.length-1];
+
+console.log(last); -->
