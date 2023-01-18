@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #day {
+            border: 2px solid red;
+            background-color: blue;
+            color: white;
+            /* margin: auto; */
+            height: 50px;
+            font-size: 30px;
+            padding-left: 300px;
+        }
+
+        img {
+            width: 100%;
+            height: 420px;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="day">
+
+    </div>
+    <img src="bhagwan/fridayParvatiJi.jpg" id="img" alt="">
+
+</body>
+<script>
+    const days = new Date().getDay();
+    let day = document.getElementById("day");
+    let image = document.getElementById("img");
+    console.log(image);
+    switch (days) {
+        case 0:
+            day.innerHTML = "Sunday Day is SuryaDev";
+            image.src = "bhagwan/sundaySuryaDev.jpg";
+            break;
+        case 1:
+            day.innerHTML = "Monday Day is Bholenath";
+            image.src = "bhagwan/mondayBholenath.jpg";
+            break;
+        case 2:
+            day.innerHTML = "Tuesday Day is Hanuman Ji";
+            image.src = "bhagwan/tuesdayHanumanJi.jpg";
+            break;
+        case 3:
+            day.innerHTML = "Wednesday Day is Ganesh Ji";
+            image.src = "bhagwan/wednesdayGanesh.jpg";
+            break;
+        case 4:
+            day.innerHTML = "Thursday Day is Vishnu Ji";
+            image.src = "bhagwan/thursdayVishnuJi.jpg";
+            break;
+        case 5:
+            day.innerHTML = "Friday Day is Parvati Mata";
+            image.src = "bhagwan/fridayParvatiJi.jpg";
+            break;
+        case 6:
+            day.innerHTML = "Saturday Day is SaniDev";
+            image.src = "bhagwan/saturdaySaniDev.jpg";
+            break;
+    }
+</script>
+
+</html>
